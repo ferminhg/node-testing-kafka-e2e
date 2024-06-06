@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  testing-service:
+    build:
+      context: .
+      target: development
+    command: yarn dev:server
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/code:cached
