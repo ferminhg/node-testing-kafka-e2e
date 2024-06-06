@@ -10,3 +10,4 @@ services:
       - "3000:3000"
     volumes:
       - ./:/code:cached
+      - /var/run/docker.sock:/var/run/docker.sock

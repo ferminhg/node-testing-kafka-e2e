@@ -4,6 +4,7 @@ Service using node to test kafka producer and consumer using different approache
 
 - Using jest.
 - Using testcontainers.
+  - ✅ Test redis. Create a container with redis and test the connection. `src/test-e2e/redis.test.ts` 
 - Using docker services.
 
 ## Running the project

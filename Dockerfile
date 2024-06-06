@@ -1,5 +1,15 @@
 FROM node:22-alpine as development
 
+RUN apk update && apk add --no-cache \
+    git \
+    openssh-client \
+    bash \
+    curl \
+    docker \
+    openrc
+
+RUN rc-update add docker boot
+
 WORKDIR /code
 COPY --chown=node:dialout package.json yarn.lock tsconfig.json .prettierrc.json /code/
 COPY --chown=node:dialout src /code/src
